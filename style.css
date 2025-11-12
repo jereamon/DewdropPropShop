@@ -1,0 +1,161 @@
+:root {
+  --sans-font: "Montserrat", Arial, Tahoma, sans-serif;
+  --serif-font: "PT Serif", "Times New Roman", Georgia, serif;
+}
+
+/* START  CSS RESET */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* END  CSS RESET */
+
+body {
+  background-color: #333;
+}
+
+h1, h2, h3, h4, h5, h6, ol, ul {
+  color: #eeeeee;
+  font-family: var(--sans-font);
+}
+
+p, a {
+  color: #eeeeee;
+  font-family: var(--serif-font);
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-link {
+  /* background-color: #009A95; */
+  background-color: rgb(0, 109, 99);
+  border-radius: 8px;
+  padding: 10px 25px;
+  text-decoration: none;
+  transition: background-color 250ms;
+}
+
+.button-link:hover {
+  background-color: rgb(0, 154, 149);
+}
+
+.flex-col-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.main-container {
+  background-image: url('static/jess_bubble.jpg');
+  background-position: 100% 0%;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+
+
+    .backdrop {  
+      background-color: rgba(51, 51, 51, 0.6);
+      padding: 5vh 5vw;
+      width: 100%;
+
+      .header-container {
+        padding: 50px 0;
+
+        h3 {
+          font-size: large;
+          font-family: var(--serif-font);
+        }
+
+        h1 {
+          font-size: xx-large;
+        }
+      }
+
+
+      .about-container {
+        /* background-image: url("static/jess_nobody.jpg");
+        background-size: contain; */
+        padding: 0 0 50px;
+
+
+        p {
+          max-width: 450px;
+          text-align: center;
+        }
+
+        img {
+          border-radius: 25px;
+          max-width: 250px;
+        }
+      }
+
+
+      .store-container {
+        background-color: rgba(76, 76, 76, 0.5);
+        border-radius: 15px;
+        max-width: 450px;
+        padding: 25px 2vw;
+        width: 100%;
+
+        .listings {
+          padding: 0 0 25px;
+          width: 100%;
+
+          h3 {
+            font-family: var(--serif-font);
+            justify-self: flex-start;
+            padding: 0 0 25px;
+            text-align: left;
+            width: 100%;
+          }
+
+          .listing {
+            background-color: rgba(51, 51, 51, .75);
+            border-radius: 15px;
+            padding: 25px;
+            transition: background-color 250ms;
+
+            img {
+              max-width: 150px
+            }
+          }
+
+          .listing:hover {
+              background-color: rgba(100, 100, 100, .75);
+            }
+        }
+      }
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+
+  .main-container .backdrop {
+    padding: 25vh 5vw;
+  }
+}
